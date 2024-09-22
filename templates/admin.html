@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Submissions</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>ERP</th>
+            <th>Branch</th>
+            <th>Semester</th>
+            <th>Email</th>
+            <th>College</th>
+        </tr>
+        {% for submission in submissions %}
+        <tr>
+            <td>{{ submission.name }}</td>
+            <td>{{ submission.contact }}</td>
+            <td>{{ submission.erp }}</td>
+            <td>{{ submission.branch }}</td>
+            <td>{{ submission.semester }}</td>
+            <td>{{ submission.email }}</td>
+            <td>{{ submission.college }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

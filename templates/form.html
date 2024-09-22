@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Submission Form</title>
+</head>
+<body>
+    <h1>Submit Your Details</h1>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="contact" placeholder="Contact" required>
+        <input type="text" name="erp" placeholder="ERP" required>
+        <input type="text" name="branch" placeholder="Branch" required>
+        <input type="number" name="semester" placeholder="Semester" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="college" placeholder="College" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.onsubmit = function(event) {
+            if (!form.checkValidity()) {
+                alert('Please fill out all required fields.');
+                event.preventDefault();
+            }
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
